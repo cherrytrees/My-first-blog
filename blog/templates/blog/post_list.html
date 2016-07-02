@@ -7,6 +7,11 @@
      <h1>prova titolo</h1>
      <em>questo testo è in corsivo</em>
  </div>
-   <ul><li>elenco uno</li><li>elenco due</li></ul>
-  </body>
+   {% for post in posts %}
+    <div>
+          <p>published: {{ post.published_date}}</p>
+      	  <h1><a href="">{{ post.title}}</a></h1>
+      	  <p>{{ post.text|linebreaksbr }}</p>
+      	</div>
+{% endfor %}
 </html>
